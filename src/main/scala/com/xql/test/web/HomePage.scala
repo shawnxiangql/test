@@ -1,6 +1,6 @@
 package com.xql.test.web
 
-import com.xql.test.consumer.KafkaMessageConsumer
+import com.xql.test.consumer.ConsumerConfiguration
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.{RequestMapping, ResponseBody}
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.{RequestMapping, ResponseBody}
 @Controller
 class HomePage {
 
-  @Autowired var messageConsumer: KafkaMessageConsumer = _
+  @Autowired var messageConsumer: ConsumerConfiguration = _
 
   @RequestMapping(name = "/")
   @ResponseBody
